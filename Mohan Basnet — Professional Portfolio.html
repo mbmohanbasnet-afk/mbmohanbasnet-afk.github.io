@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Professional portfolio of Mohan Basnet Chhetri — educator, entrepreneur, and community-minded leader in Nepal.">
+<title>Mohan Basnet Chhetri | Educator & Entrepreneur</title>
+<style>
+:root {
+  --site-primary: #102a43;
+  --site-secondary: #d9a441;
+  --site-background: #f4f6f8;
+  --site-on-primary: #ffffff;
+  --site-on-secondary: #17212b;
+  --site-on-background: #172b3a;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); line-height: 1.6; }
+#app { min-height: 100vh; width: 100%; border-radius: 0; background-color: light-dark(var(--site-background), #101820); color: light-dark(var(--site-on-background), #e8edf2); }
+.container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+header { background: var(--site-primary); color: var(--site-on-primary); border-bottom: 3px solid var(--site-secondary); }
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; font-weight: 800; letter-spacing: .2px; }
+.brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--site-secondary); color: var(--site-on-secondary); font-weight: 900; }
+nav { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
+nav a { color: inherit; text-decoration: none; font-size: .92rem; opacity: .9; }
+nav a:hover, nav a:focus { color: var(--site-secondary); }
+.hero { position: relative; overflow: hidden; background: var(--site-primary); color: var(--site-on-primary); padding: calc(82px * var(--site-spacing-scale)) 0 calc(90px * var(--site-spacing-scale)); }
+.hero::after { content: ""; position: absolute; width: 440px; height: 440px; border: 1px solid var(--site-secondary); border-radius: 50%; right: -90px; top: -150px; opacity: calc(.22 * var(--site-decoration-opacity)); box-shadow: 0 0 0 45px rgba(217,164,65,.06), 0 0 0 90px rgba(217,164,65,.04); pointer-events: none; }
+.hero-grid { display: grid; grid-template-columns: 1.4fr .6fr; align-items: center; gap: 52px; position: relative; z-index: 1; }
+.eyebrow { color: var(--site-secondary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: .78rem; }
+h1,h2,h3 { font-family: var(--site-font-heading); line-height: 1.15; }
+h1 { font-size: clamp(2.7rem, 6vw, 4.8rem); letter-spacing: -2px; margin: 16px 0; }
+h1 span { color: var(--site-secondary); }
+.hero p { max-width: 660px; font-size: 1.1rem; color: #d9e2ec; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 19px; border-radius: calc(8px * var(--site-radius-scale)); border: 1px solid var(--site-secondary); text-decoration: none; font-weight: 750; cursor: pointer; transition: transform .18s ease, background .18s ease; }
+.button:hover { transform: translateY(-2px); }
+.button.primary { background: var(--site-secondary); color: var(--site-on-secondary); }
+.button.outline { color: var(--site-on-primary); background: transparent; }
+.profile-card { border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.06); padding: 30px; border-radius: calc(20px * var(--site-radius-scale)); backdrop-filter: blur(4px); }
+.avatar { width: 118px; height: 118px; display: grid; place-items: center; margin: 0 auto 20px; border-radius: 50%; border: 3px solid var(--site-secondary); background: #e7edf3; color: var(--site-primary); font-size: 2.4rem; font-weight: 900; }
+.avatar img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 24%; border-radius: 50%; }
+.profile-card h2 { text-align: center; font-size: 1.2rem; margin: 0 0 6px; }
+.profile-card p { text-align: center; margin: 0; font-size: .92rem; color: #d9e2ec; }
+.profile-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+.profile-tags span { font-size: .75rem; padding: 5px 9px; border: 1px solid rgba(255,255,255,.2); border-radius: 99px; }
+section { padding: calc(72px * var(--site-spacing-scale)) 0; }
+.section-head { max-width: 700px; margin-bottom: 32px; }
+.section-head h2 { font-size: calc(clamp(2rem, 4vw, 3rem) * var(--site-heading-scale)); letter-spacing: -1px; margin: 10px 0 12px; }
+.section-head p { margin: 0; opacity: .8; }
+.about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 46px; align-items: start; }
+.quote-panel { background: var(--site-primary); color: var(--site-on-primary); padding: 30px; border-radius: calc(16px * var(--site-radius-scale)); border-left: 5px solid var(--site-secondary); }
+.quote-panel .quote-mark { font-size: 3rem; line-height: .8; color: var(--site-secondary); }
+.quote-panel p { font-size: 1.18rem; font-weight: 650; }
+.mini-stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-top: 20px; }
+.stat { padding: 17px; border: 1px solid light-dark(#d9e0e7,#35424e); border-radius: calc(12px * var(--site-radius-scale)); }
+.stat strong { display: block; font-size: 1.45rem; color: var(--site-secondary); }
+.cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.card { padding: 25px; border: 1px solid light-dark(#dbe2e9,#35424e); background: light-dark(#ffffff,#18232d); border-radius: calc(15px * var(--site-radius-scale)); }
+.card-icon { width: 46px; height: 46px; display: grid; place-items: center; background: color-mix(in srgb, var(--site-secondary) 22%, transparent); border-radius: 12px; font-size: 1.35rem; }
+.card h3 { font-size: 1.2rem; margin: 18px 0 9px; }
+.card p { margin: 0; opacity: .78; font-size: .95rem; }
+.timeline { border-left: 2px solid var(--site-secondary); margin-left: 9px; padding-left: 26px; display: grid; gap: 24px; }
+.timeline-item { position: relative; }
+.timeline-item::before { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--site-secondary); left: -33px; top: 5px; }
+.timeline-item h3 { margin: 0 0 5px; font-size: 1.12rem; }
+.timeline-item p { margin: 0; opacity: .78; }
+.timeline-item .date { color: var(--site-secondary); font-size: .8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+.soft { background: light-dark(#eaf0f5,#141f29); }
+.projects { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+.project { border: 1px solid light-dark(#dbe2e9,#35424e); border-radius: calc(15px * var(--site-radius-scale)); overflow: hidden; background: light-dark(#fff,#18232d); }
+.project-top { padding: 22px 24px; background: var(--site-primary); color: var(--site-on-primary); border-bottom: 3px solid var(--site-secondary); }
+.project-top small { color: var(--site-secondary); font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; }
+.project-top h3 { margin: 8px 0 0; font-size: 1.35rem; }
+.project-body { padding: 22px 24px; }
+.project-body p { margin: 0 0 14px; opacity: .8; }
+.pill { display: inline-block; padding: 5px 9px; margin: 3px 4px 0 0; border-radius: 99px; background: color-mix(in srgb, var(--site-secondary) 22%, transparent); font-size: .76rem; font-weight: 700; }
+.contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; }
+.contact-panel { background: var(--site-primary); color: var(--site-on-primary); padding: 28px; border-radius: calc(16px * var(--site-radius-scale)); }
+.contact-panel h3 { margin-top: 0; }
+.contact-panel p { color: #d9e2ec; }
+.contact-form { display: grid; gap: 13px; }
+label { font-weight: 700; font-size: .9rem; }
+input,textarea { width: 100%; margin-top: 6px; padding: 12px 13px; border-radius: calc(8px * var(--site-radius-scale)); border: 1px solid light-dark(#cbd5df,#475563); background: light-dark(#fff,#18232d); color: inherit; font: inherit; }
+textarea { min-height: 125px; resize: vertical; }
+.form-note { font-size: .82rem; opacity: .7; }
+footer { background: var(--site-primary); color: var(--site-on-primary); padding: 26px 0; border-top: 3px solid var(--site-secondary); }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap; }
+footer p { margin: 0; font-size: .88rem; color: #d9e2ec; }
+footer a { color: var(--site-secondary); }
+@media (max-width: 780px) { .nav { align-items: flex-start; flex-direction: column; padding: 17px 0; gap: 13px; } nav { gap: 13px; } .hero-grid,.about-grid,.contact-grid { grid-template-columns: 1fr; gap: 28px; } .hero { padding: 58px 0; } .profile-card { max-width: 420px; } .cards { grid-template-columns: 1fr; } .projects { grid-template-columns: 1fr; } section { padding: 54px 0; } }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div id="app">
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Mohan Basnet Chhetri home"><span class="brand-mark">MB</span><span>MOHAN BASNET CHHETRI</span></a>
+    <nav aria-label="Main navigation"><a href="#about" data-en="About" data-ne="मेरो बारेमा">About</a><a href="#expertise" data-en="Expertise" data-ne="कार्य क्षेत्र">Expertise</a><a href="#journey" data-en="Journey" data-ne="यात्रा">Journey</a><a href="#work" data-en="My Work" data-ne="मेरो काम">My Work</a><a href="#contact" data-en="Contact" data-ne="सम्पर्क">Contact</a><button class="button outline" id="languageToggle" type="button" aria-label="Switch language">नेपाली</button></nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow" data-en="Educator · Entrepreneur · Lifelong Learner" data-ne="शिक्षक · उद्यमी · जीवनपर्यन्त सिक्ने व्यक्ति">Educator · Entrepreneur · Lifelong Learner</div>
+      <h1><span data-en="Ideas into action." data-ne="विचारलाई कार्यमा।">Ideas into action.</span><br><span data-en="Learning into opportunity." data-ne="सिकाइलाई अवसरमा।">Learning into opportunity.</span></h1>
+      <p data-en="I’m Mohan Basnet Chhetri, a mathematics and science teacher, computer-training instructor, and entrepreneur from Nepal. My work connects education, practical skills, and community-focused enterprise." data-ne="म मोहन बस्नेत क्षेत्री, गणित तथा विज्ञान शिक्षक, कम्प्युटर प्रशिक्षक र नेपालका उद्यमी हुँ। मेरो कामले शिक्षा, व्यावहारिक सीप र समुदायमुखी उद्यमलाई जोड्छ।">I’m Mohan Basnet Chhetri, a mathematics and science teacher, computer-training instructor, and entrepreneur from Nepal. My work connects education, practical skills, and community-focused enterprise.</p>
+      <div class="actions"><a class="button primary" href="#about" data-en="Explore My Portfolio ↘" data-ne="मेरो परिचय हेर्नुहोस् ↘">Explore My Portfolio <span aria-hidden="true">↘</span></a><a class="button outline" href="#contact" data-en="Connect With Me" data-ne="सम्पर्क गर्नुहोस्">Connect With Me</a></div>
+    </div>
+    <aside class="profile-card" aria-label="Profile summary">
+      <div class="avatar" aria-label="Mohan Basnet Chhetri profile photo"><img src="mohan-basnet-chhetri.jpg" alt="Portrait of Mohan Basnet Chhetri"></div>
+      <h2>Mohan Basnet Chhetri</h2>
+      <p>Teacher & Director, Bageshwori Computer Institute</p>
+      <div class="profile-tags"><span>BSc Chemistry</span><span>Technology</span><span>Entrepreneurship</span></div>
+    </aside>
+  </div>
+</section>
+<section id="about">
+  <div class="container about-grid">
+    <div class="quote-panel"><div class="quote-mark">“</div><p>I believe education should build confidence, practical ability, and the courage to create new opportunities.</p><div class="eyebrow">My guiding belief</div></div>
+    <div>
+      <div class="section-head"><div class="eyebrow">A little about me</div><h2>Teaching with purpose. Building with vision.</h2><p>My professional journey combines classroom teaching with hands-on experience running a local computer and tuition institute. I value continuous learning, responsible leadership, and work that creates lasting value for people.</p></div>
+      <p>I hold a Bachelor of Science (BSc) degree with Chemistry as my major subject. I have taught mathematics and science at school level and supported learners through computer education and exam-focused learning. Through Bageshwori Computer Institute, I have worked to make practical digital skills more accessible in my community. I continue to explore sustainable business ideas and ways to contribute to Nepal’s development.</p>
+      <div class="mini-stats"><div class="stat"><strong>60+</strong><span>Learners trained or passed through institute programmes, as reported through 2083</span></div><div class="stat"><strong>Since 2077 BS</strong><span>Building an education-focused enterprise</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="soft" id="expertise">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">What I do</div><h2>Areas of focus</h2><p>A practical mix of teaching, digital skills, small-business development, and community engagement.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-icon" aria-hidden="true">📘</div><h3>Teaching & Learning</h3><p>School-level mathematics and science teaching, exam preparation, learner motivation, and clear explanations that connect concepts with real life.</p></article>
+      <article class="card"><div class="card-icon" aria-hidden="true">💻</div><h3>Computer Education</h3><p>Computer-training programmes and practical digital skills, including office applications, graphic design tools, and foundational computer knowledge.</p></article>
+      <article class="card"><div class="card-icon" aria-hidden="true">🚀</div><h3>Entrepreneurship</h3><p>Developing local business ideas, improving operations, exploring investment models, and creating plans with a focus on sustainability.</p></article>
+      <article class="card"><div class="card-icon" aria-hidden="true">🧭</div><h3>Leadership & Growth</h3><p>Building communication, management, collaboration, and long-term planning skills to serve teams and communities effectively.</p></article>
+      <article class="card"><div class="card-icon" aria-hidden="true">🎥</div><h3>Educational Content</h3><p>Creating learning resources and digital content to make mathematics, science, and computer education easier to access.</p></article>
+      <article class="card"><div class="card-icon" aria-hidden="true">🤝</div><h3>Community Impact</h3><p>Supporting students and exploring practical, locally relevant initiatives that can contribute to community opportunity and development.</p></article>
+    </div>
+  </div>
+</section>
+<section id="journey">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Professional journey</div><h2>Learning, teaching, and building</h2><p>A concise overview of the experience that has shaped my work. Dates and details can be refined for a final public version.</p></div>
+    <div class="timeline">
+      <div class="timeline-item"><div class="date">Early career</div><h3>Started teaching mathematics and science</h3><p>Built classroom experience across schools, working with students at different stages of their learning journey.</p></div>
+      <div class="timeline-item"><div class="date">Higher education</div><h3>Bachelor of Science (BSc), Chemistry</h3><p>Completed a science degree with Chemistry as the major subject while building practical experience through school teaching.</p></div>
+      <div class="timeline-item"><div class="date">2077 BS · 2021 AD</div><h3>Started Bageshwori Computer Institute</h3><p>Began with limited resources and a small group of learners, with the aim of making computer education more accessible.</p></div>
+      <div class="timeline-item"><div class="date">Ongoing</div><h3>Expanding education and enterprise ideas</h3><p>Continuing to teach, develop educational content, run institute programmes, and explore responsible business opportunities.</p></div>
+    </div>
+  </div>
+</section>
+<section class="soft" id="work">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects and initiatives</h2><p>Work that reflects my interests in education, technology, and enterprise.</p></div>
+    <div class="projects">
+      <article class="project"><div class="project-top"><small>Education · Digital Skills</small><h3>Bageshwori Computer Institute</h3></div><div class="project-body"><p>An education-focused institute offering computer training and tuition support in the Khajura–Rimjhim area of Banke, Nepal.</p><span class="pill">Computer Training</span><span class="pill">Tuition Support</span><span class="pill">Digital Skills</span></div></article>
+      <article class="project"><div class="project-top"><small>Teaching · Content</small><h3>Mathematics & Science Learning</h3></div><div class="project-body"><p>Student-focused explanations, exam preparation, and digital learning content designed to make challenging topics clearer and more approachable.</p><span class="pill">SEE Preparation</span><span class="pill">Science</span><span class="pill">Mathematics</span></div></article>
+      <article class="project"><div class="project-top"><small>Enterprise · Planning</small><h3>Basnet Unity Investment Company</h3></div><div class="project-body"><p>Exploring structured investment, business planning, and collaboration as a foundation for responsible long-term enterprise development.</p><span class="pill">Business Planning</span><span class="pill">Investment Ideas</span></div></article>
+      <article class="project"><div class="project-top"><small>Community · Innovation</small><h3>Local Opportunity Initiatives</h3></div><div class="project-body"><p>Researching practical local ideas and service models that may help address community needs and create new economic opportunities.</p><span class="pill">Community</span><span class="pill">Innovation</span><span class="pill">Sustainability</span></div></article>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container contact-grid">
+    <div><div class="section-head"><div class="eyebrow" data-en="Get in touch" data-ne="सम्पर्क गर्नुहोस्">Get in touch</div><h2 data-en="Let’s connect and create value." data-ne="जोडिऔँ र मूल्य सिर्जना गरौँ।">Let’s connect and create value.</h2><p data-en="I welcome conversations about education, training, collaboration, entrepreneurship, and community-focused projects." data-ne="शिक्षा, तालिम, सहकार्य, उद्यमशीलता र समुदायमुखी परियोजनाबारे संवाद गर्न स्वागत गर्दछु।">I welcome conversations about education, training, collaboration, entrepreneurship, and community-focused projects.</p></div><p><strong data-en="Based in:" data-ne="ठेगाना:">Based in:</strong> Banke, Lumbini Province, Nepal</p><p><strong data-en="Education:" data-ne="शिक्षा:">Education:</strong> BSc, major in Chemistry</p><p><strong data-en="Phone:" data-ne="फोन:">Phone:</strong> <a href="tel:+9779866350008">9866350008</a></p><p><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCN5hbQaOTaOFCK29243xkWQ" target="_blank" rel="noopener noreferrer">Watch my educational content ↗</a></p><p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1cZSszhGDK/" target="_blank" rel="noopener noreferrer">Connect on Facebook ↗</a></p></div>
+    <div class="contact-panel"><h3>Send a message</h3><p>This preview includes a local demo form. It does not send or store messages; connect a form service or email workflow when publishing.</p>
+      <form class="contact-form" id="contactForm"><label for="name">Your name<input id="name" name="name" autocomplete="name" required placeholder="Enter your name"></label><label for="email">Your email<input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label for="message">How can we connect?<textarea id="message" name="message" required placeholder="Write a short message..."></textarea></label><button class="button primary" type="submit">Prepare message ↗</button><div id="formStatus" class="form-note" role="status" aria-live="polite"></div></form>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="container footer-inner"><p>© <span id="year"></span> Mohan Basnet Chhetri. Personal portfolio preview.</p><p>Built around <a href="#home">learning, purpose, and progress.</a></p></div></footer>
+</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('languageToggle').addEventListener('click', function() {
+  const nextLanguage = document.documentElement.lang === 'en' ? 'ne' : 'en';
+  document.documentElement.lang = nextLanguage;
+  document.querySelectorAll('[data-en][data-ne]').forEach(function(element) {
+    element.textContent = element.getAttribute('data-' + nextLanguage);
+  });
+  this.textContent = nextLanguage === 'en' ? 'नेपाली' : 'English';
+  this.setAttribute('aria-label', nextLanguage === 'en' ? 'Switch to Nepali' : 'Switch to English');
+});
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const subject = encodeURIComponent('Portfolio inquiry for Mohan Basnet Chhetri');
+  const body = encodeURIComponent(`Hello Mohan Basnet Chhetri,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`);
+  document.getElementById('formStatus').textContent = 'Demo only: add your public email address to enable a real send-message link.';
+  // Deliberately does not open an email client or transmit personal data in this preview.
+});
+</script>
+</body>
+</html>
